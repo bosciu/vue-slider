@@ -23,7 +23,7 @@
             <div class="selector">
                 <ul>
                     <li v-for="image,index in images">
-                        <i :class="index == imagesIndex ? 'far' : 'fa'" class="fa-circle"></i>
+                        <i :class="index == imagesIndex ? 'far' : 'fa'" class="fa-circle" @click="imagesIndex = index"></i>
                     </li>
                 </ul>
             </div>
