@@ -23,8 +23,7 @@
             <div class="selector">
                 <ul>
                     <li v-for="image,index in images">
-                        {{index}} {{image}}
-                        <i class="far fa-circle"></i>
+                        <i :class="index == imagesIndex ? 'far' : 'fa'" class="fa-circle"></i>
                     </li>
                 </ul>
             </div>
