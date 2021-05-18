@@ -26,5 +26,13 @@ const app = new Vue({
                 this.imagesIndex = this.images.length - 1;
             }
         }
+    },
+    mounted() {
+        setInterval(() => {
+            this.imagesIndex++;
+            if (this.imagesIndex == this.images.length) {
+                this.imagesIndex = 0;
+            }
+        }, 3000);
     }
 });
