@@ -10,6 +10,21 @@ const app = new Vue({
             "img/paesaggio2.jpg",
             "img/paesaggio3.jpg",
             "img/paesaggio4.jpg"
-        ]
+        ],
+        imagesIndex: 0
+    },
+    methods: {
+        imageNext: function() {
+            this.imagesIndex++;
+            if (this.imagesIndex == this.images.length) {
+                this.imagesIndex = 0;
+            }
+        },
+        imagePrev: function() {
+            this.imagesIndex--;
+            if (this.imagesIndex == -1) {
+                this.imagesIndex = this.images.length - 1;
+            }
+        }
     }
 });
